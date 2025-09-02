@@ -1,0 +1,56 @@
+:root {
+  /* Základní barvy */
+  --primary-color: #D90DA2;
+  --primary-color-transparent: #d90da370;        /* růžová (hlavní) */
+  --primary-color-dark: #59024B;
+  --primary-color-dark-transparent: #59024B70;
+  --secondary-color: #E372F2;
+  --secondary-color-transprent: #E372F270;
+
+  /* Podklad */
+  --background-color: #262626;
+  --background-gradient: linear-gradient(135deg, #262626, #1a1a1a);
+
+  /* Glassmorphism box */
+  --box-color: rgba(255, 255, 255, 0.15); /* světlejší průhledná bílá */
+  --box-border: rgba(255, 255, 255, 0.25); 
+  --box-shadow: rgba(0, 0, 0, 0.7);
+  --glass-blur: 15px;
+
+  /* Text */
+  --text-light: #FAFAFA;
+  --text-soft: #D6D6D6;
+  --text-accent: #FFFFFF;
+
+  /* Akcentní barvy */
+  --accent-primary: #00ff09;
+  --accent-secondary: #85f272;
+
+  /* Efekty */
+  --hover-overlay: rgba(255, 255, 255, 0.1);
+  --active-overlay: rgba(255, 255, 255, 0.2);
+
+  /** Font size */
+  --text-small: clamp(0.9375rem, 0.7866rem + 0.6897vw, 1.5625rem);
+  --text-middle: clamp(1.25rem, 1.0991rem + 0.6897vw, 1.875rem);
+  --text-large: clamp(1.5rem, 1.25rem + 1vw, 2.5rem);
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  background: url(./img/purple-abstract-waves.jpg);
+  background-size: cover;
+  background-position: center center;
+ 
+}
