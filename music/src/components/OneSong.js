@@ -3,9 +3,10 @@ import { useRef, useState, useEffect, useCallback  } from "react";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import { FaPlay, FaPause } from "react-icons/fa6";
 import { BsFillSkipForwardFill, BsSkipBackwardFill } from "react-icons/bs";
+import { TbArrowsRight, TbArrowsShuffle, TbRepeat, TbRepeatOff} from "react-icons/tb";
 
-const OneSong = ({ song, prevSong, nextSong }) => {
-    
+const OneSong = ({ song, prevSong, nextSong, replay, shuffle, toggleReplay, toggleShuffle }) => {
+
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [progress, setProgress] = useState(0);
@@ -199,7 +200,7 @@ const OneSong = ({ song, prevSong, nextSong }) => {
     return (
         <section className="one-song" role="group" aria-label="Music player">
             <article className="player" key={song.id}>
-                <img className="song-cover" src={song.cover} alt={song.songName} />
+                <img className="song-cover" src={song.cover} alt={song.songName} width={600} height={600}/>
                 <p className="song" aria-live="polite">{song.songName}</p>
                 <p className="author" aria-live="polite">{song.author}</p>
 
@@ -207,6 +208,20 @@ const OneSong = ({ song, prevSong, nextSong }) => {
                  <audio ref={audioRef} src={song.track}></audio>
 
                 <div className="controls">
+                    <div className="setting-buttons">
+                        <button 
+                            className={`shuffle ${shuffle ? "active" : ""}`}
+                            onClick={toggleShuffle}
+                            aria-label={shuffle ? "Play in the original order" : "Play random"}>
+                            {shuffle ? <TbArrowsShuffle /> : <TbArrowsRight /> }
+                        </button>
+                        <button 
+                            className={`replay ${replay ? "active" : ""}`}
+                            onClick={toggleReplay}
+                            aria-label={replay ? "Repeat off" : "Repeat"}>
+                            {replay ? <TbRepeat /> : <TbRepeatOff />}
+                        </button>
+                    </div>
                     <div className="buttons">
                          <button 
                             onClick={prevSong}

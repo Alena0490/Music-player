@@ -13,6 +13,7 @@
 
   /* Glassmorphism box */
   --box-color: rgba(255, 255, 255, 0.15); /* světlejší průhledná bílá */
+  --box-color-dark: rgba(121, 121, 121, 0.1);
   --box-border: rgba(255, 255, 255, 0.25); 
   --box-shadow: rgba(0, 0, 0, 0.7);
   --glass-blur: 15px;
@@ -24,7 +25,9 @@
 
   /* Akcentní barvy */
   --accent-primary: #00ff09;
+  --accent-primary-transparent: #00ff0880;
   --accent-secondary: #85f272;
+  --accent-secondary-transparent: #85f27290;
 
   /* Efekty */
   --hover-overlay: rgba(255, 255, 255, 0.1);
