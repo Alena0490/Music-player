@@ -1,4 +1,38 @@
-# Getting Started with Create React App
+
+# 🎵 Music Player
+
+An interactive music player built with **React**, featuring custom file upload, metadata display, and a modern user interface.
+
+![Music Player Mockup](/mockup.png)
+
+👉 [Live Demo](https://alena0490.github.io/Music-player/)
+
+---
+
+## ✨ Features
+
+- ▶️ **Play & Pause** songs  
+- ⏭️ **Skip** to next / previous track  
+- 🔀 **Shuffle mode**  
+- 🔊 **Volume control** with slider  
+- 🖼️ **Album cover display** (if metadata is available)  
+- 📂 **Upload your own songs**  
+  - Extracts ID3 metadata (title, artist, cover) using `jsmediatags`  
+  - Uses a fallback cover if no metadata is found  
+
+---
+
+## 🛠️ Tech Stack
+
+- [React](https://reactjs.org/) – UI library  
+- [React Icons](https://react-icons.github.io/react-icons/) – icon set for controls  
+- [jsmediatags](https://github.com/aadsm/jsmediatags) – metadata parsing  
+- [HTML5 Audio API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)  
+- [GitHub Pages](https://pages.github.com/) – deployment  
+
+---
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

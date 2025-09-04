@@ -35,9 +35,9 @@
   --active-overlay: rgba(255, 255, 255, 0.2);
 
   /** Font size */
-  --text-small: clamp(0.9375rem, 0.7866rem + 0.6897vw, 1.5625rem);
-  --text-middle: clamp(1.25rem, 1.0991rem + 0.6897vw, 1.875rem);
-  --text-large: clamp(1.5rem, 1.25rem + 1vw, 2.5rem);
+  --text-small: clamp(1.25rem, 1.25rem + 0.6897vw, 1.5625rem);
+  --text-middle: clamp(1.55rem, 1.55rem + 0.6897vw, 1.875rem);
+  --text-large: clamp(1.8rem, 1.8rem + 1vw, 2.5rem);
 
     /* Statusové barvy */
 --status-success: #00ffcc;        
