@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "jsmediatags": "^3.9.7",
     "react-icons": "^5.5.0"
   }
 }

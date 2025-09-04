@@ -1,11 +1,11 @@
 import "./OneSong.css"
 import { useRef, useState, useEffect, useCallback  } from "react";
-import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
+import { FaVolumeMute, FaVolumeUp, FaPlus, FaTrashAlt  } from "react-icons/fa";
 import { FaPlay, FaPause } from "react-icons/fa6";
 import { BsFillSkipForwardFill, BsSkipBackwardFill } from "react-icons/bs";
 import { TbArrowsRight, TbArrowsShuffle, TbRepeat, TbRepeatOff} from "react-icons/tb";
 
-const OneSong = ({ song, prevSong, nextSong, replay, shuffle, toggleReplay, toggleShuffle }) => {
+const OneSong = ({ song, prevSong, nextSong, replay, shuffle, toggleReplay, toggleShuffle, handleUpload, removeUploadedSong }) => {
 
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
@@ -242,7 +242,9 @@ const OneSong = ({ song, prevSong, nextSong, replay, shuffle, toggleReplay, togg
                         </button>
                     </div>
                     <div className="volume-slider">
-                        <FaVolumeMute />
+                        <FaVolumeMute 
+    className={volume === 0 ? "mute-icon active" : "mute-icon"} 
+  />
                         <input
                             type="range"
                             min="0"
@@ -285,7 +287,24 @@ const OneSong = ({ song, prevSong, nextSong, replay, shuffle, toggleReplay, togg
                     {formatTime(audioRef.current?.currentTime || 0)} / {formatTime(audioRef.current?.duration || 0)}
                 </p>
             </div>
-            </article>
+                <div className="upload-wrap" aria-label="Upload file">
+                    <input 
+                        type="file" 
+                        className="upload" 
+                        id="upload"
+                        accept="audio/*"
+                        onChange={handleUpload}
+                        >
+                    </input>
+                    <label htmlFor="upload"><FaPlus /></label>
+                    <button 
+                        className="delete-song" 
+                        onClick={() => removeUploadedSong(song.id)}
+                        disabled={!song.isUploaded} >
+                        <FaTrashAlt />
+                    </button>
+                </div>
+            </article>     
         </section>
     )
 }

@@ -16,6 +16,7 @@
   --box-color-dark: rgba(121, 121, 121, 0.1);
   --box-border: rgba(255, 255, 255, 0.25); 
   --box-shadow: rgba(0, 0, 0, 0.7);
+  --box-shadow-transparent: rgba(0, 0, 0, 0.1);
   --glass-blur: 15px;
 
   /* Text */
@@ -37,6 +38,19 @@
   --text-small: clamp(0.9375rem, 0.7866rem + 0.6897vw, 1.5625rem);
   --text-middle: clamp(1.25rem, 1.0991rem + 0.6897vw, 1.875rem);
   --text-large: clamp(1.5rem, 1.25rem + 1vw, 2.5rem);
+
+    /* Statusové barvy */
+--status-success: #00ffcc;        
+--status-success-transparent: #00ffcc80;
+
+--status-warning: #ffff00;    
+--status-warning-transparent: #ffff0080;
+
+--status-error: #ff5673;                 /* (Apple neon red) */
+--status-error-transparent: #ff2d5580;
+
+--status-info: #5cbbff;               
+--status-info-transparent: #33aaff80;
 }
 
 
@@ -57,3 +71,4 @@
   background-position: center center;
  
 }
+
