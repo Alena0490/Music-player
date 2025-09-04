@@ -58,7 +58,7 @@ const handleUpload = (e) => {
           id: Date.now(),
           songName: file.name,
           author: "Unknown",
-          cover: "/fallback2.webp",
+          cover: process.env.PUBLIC_URL + "/fallback2.webp",
           track: url,
           isUploaded: true,
         };
