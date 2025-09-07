@@ -345,13 +345,33 @@ input[type=range].volume-slider-input::-moz-range-track {
 @media (max-width: 500px) {
 
     .player {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         min-width: unset;
+        margin: 1rem;
+        height: calc(100svh - 2rem);
+    }
+
+    .audio-box {
+        bottom: 25%;
+        left: auto;
+    }
+
+    
+    .setting-buttons {
+        position: relative;
+        left: auto;
     }
 
     .controls {
+        width: 80%;
         height: 15svh;
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
         margin-bottom: 2rem;
     }
 
@@ -359,9 +379,23 @@ input[type=range].volume-slider-input::-moz-range-track {
         position: relative;
         top: 0;
         right: 0;
-        width: 40%;
+        width: 80%;
         margin-top: auto;
 
+    }
+}
+
+@media (max-width: 400px) {
+    .controls {
+        margin-bottom: 5rem;
+    }
+
+    .setting-buttons {
+        margin-block: -0.5rem;
+    }
+
+    .progress-slider {
+        width: 60%;
     }
 }
 
